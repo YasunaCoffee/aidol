@@ -74,18 +74,43 @@ def create_subtitle_image(text, character, width=1280, height=100):
     img = Image.new('RGBA', (width, height), (0, 0, 0, 180))  # 半透明の黒背景
     draw = ImageDraw.Draw(img)
     
-    try:
-        font = ImageFont.truetype("arial.ttf", 36)
-    except:
-        font = ImageFont.load_default()
+    # 日本語対応フォントを設定
+    font = None
+    font_paths = [
+        "C:/Windows/Fonts/msgothic.ttc",      # MS ゴシック
+        "C:/Windows/Fonts/msmincho.ttc",      # MS 明朝
+        "C:/Windows/Fonts/NotoSansCJK.ttc",   # Noto Sans CJK
+        "C:/Windows/Fonts/YuGothM.ttc",       # 游ゴシック Medium
+        "C:/Windows/Fonts/meiryo.ttc",        # メイリオ
+    ]
+    
+    # 利用可能なフォントを試す
+    for font_path in font_paths:
+        try:
+            font = ImageFont.truetype(font_path, 36)
+            break
+        except:
+            continue
+    
+    # フォントが見つからない場合はデフォルトフォントを使用
+    if font is None:
+        try:
+            font = ImageFont.load_default()
+        except:
+            font = ImageFont.load_default()
     
     # キャラクター名付きテキスト
     subtitle_text = f"{character}: {text}"
     
     # テキストサイズを取得して中央に配置
-    bbox = draw.textbbox((0, 0), subtitle_text, font=font)
-    text_width = bbox[2] - bbox[0]
-    text_height = bbox[3] - bbox[1]
+    try:
+        bbox = draw.textbbox((0, 0), subtitle_text, font=font)
+        text_width = bbox[2] - bbox[0]
+        text_height = bbox[3] - bbox[1]
+    except:
+        # 古いPillowバージョン用のフォールバック
+        text_width, text_height = draw.textsize(subtitle_text, font=font)
+    
     x = (width - text_width) // 2
     y = (height - text_height) // 2
     
