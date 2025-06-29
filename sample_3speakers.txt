@@ -1,0 +1,30 @@
+<metadata>
+title: 3人のポッドキャスト
+speakers: youchusu (九州そら), nichan (猫使アル), suzu (冥鳴ひまり)
+</metadata>
+
+[youchusu:speedScale=1.0;pitchScale=0.0]みなさん、こんにちは！今日は新しいポッドキャストの収録ですね。
+
+[nichan:speedScale=1.1;pitchScale=0.2]はじめまして〜！今日はよろしくお願いします！
+
+[suzu:speedScale=0.95;pitchScale=0.1]こんにちは。今日のテーマは何でしょうか？
+
+[youchusu:speedScale=1.0;pitchScale=0.0]今日は、最近話題のAI技術について話していきたいと思います。
+
+[nichan:speedScale=1.1;pitchScale=0.2;intonationScale=1.2]AI技術といえば、音声合成もその一つですよね！私たちも今、AIの力で話しているんです。
+
+[suzu:speedScale=0.9;pitchScale=0.1;volumeScale=1.0]本当に技術の進歩は素晴らしいですね。自然な会話ができるなんて。
+
+[youchusu:speedScale=1.0;pitchScale=0.0]そうですね。皆さんはAI技術の中で、特に興味のある分野はありますか？
+
+[nichan:speedScale=1.2;pitchScale=0.3]私は画像生成AIに興味があります！絵を描くのが苦手だから、とても便利だと思うんです。
+
+[suzu:speedScale=0.85;pitchScale=0.05]私は自然言語処理に興味がありますね。人間の言葉を理解するって、本当に複雑で奥深いと思います。
+
+[youchusu:speedScale=1.0;pitchScale=0.1]どちらも素晴らしい分野ですね。今後も技術の発展を見守っていきましょう。
+
+[nichan:speedScale=1.1;pitchScale=0.2]また次回も楽しい話ができそうですね！
+
+[suzu:speedScale=0.9;pitchScale=0.0]それでは、今日はここまでです。ありがとうございました。
+
+[youchusu:speedScale=1.0;pitchScale=0.0]皆さん、今日はありがとうございました。次回もお楽しみに！ 
